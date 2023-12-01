@@ -15,15 +15,3 @@ These solutions are implemented using Ruby.
 ## How to Use
 - Each directory contains the solution for that day along with any input data necessary.
 
-## Contribution
-Suggestions and improvements are welcome via pull requests.
-
-## Disclaimer
-These solutions are for educational purposes and to share coding practices and approaches. Please use them responsibly.
-
-## Acknowledgements
-Thanks to [Advent of Code](https://adventofcode.com/2023) for hosting such an engaging and educational event.
-
-## License
-This project is open-source and available under [appropriate license].
-
