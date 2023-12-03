@@ -16,27 +16,19 @@ def replace_number_in_words(string)
   replaced_string = string.gsub(/one|two|three|four|five|six|seven|eight|nine/, number_in_words)
 end
 
-def decode_values(file_path, replace_words = false)
-  file_content = File.read(file_path)
+def decode_values(replace_words = false)
+  file_content = File.read('src/day1/day1input.txt')
   encoded_values = file_content.split("\n")
   normalized_encoded_values = replace_words ? encoded_values.map { |line| replace_number_in_words(line) } : encoded_values
-  calibrated = normalized_encoded_values.map do |value|
+  decoded_values = normalized_encoded_values.map do |value|
     (find_first_digit(value) + find_last_digit(value)).to_i
   end
-  final_value = calibrated.reduce(:+)
+  final_value = decoded_values.reduce(:+)
   final_value
 end
 
-def problem1
-  decode_values(file_path)
+def day_1_problems
+  problem_1 = decode_values
+  problem_2 = decode_values(replace_words = true)
+  [problem_1, problem_2]
 end
-
-def problem2
-  decode_values(file_path, replace_words = true)
-end
-
-def file_path
-  return 'day1input.txt'
-end
-
-puts problem2
