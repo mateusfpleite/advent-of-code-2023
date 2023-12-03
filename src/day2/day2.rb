@@ -22,6 +22,7 @@ def find_min_power_set_sum(games)
     game[:blues].max * game[:reds].max * game[:greens].max
   end.reduce(:+)
 end
+
 def day_2_problems
   file_content = File.read('src/day2/day2input.txt')
   game_list = file_content.split("\n")

@@ -32,3 +32,5 @@ def day_1_problems
   problem_2 = decode_values(replace_words = true)
   [problem_1, problem_2]
 end
+
+puts day_1_problems
